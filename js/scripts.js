@@ -35,6 +35,10 @@ $(document).ready(function() {
 
     $('#results').text(result);
     $('#results').show();
+    $('.basic.modal')
+      .modal('show')
+      .transition('fadeIn')
+    ;
     event.preventDefault();
   });
 });

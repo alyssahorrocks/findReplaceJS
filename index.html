@@ -3,30 +3,40 @@
   <head>
     <meta charset="utf-8">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
     <script src="js/scripts.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <title>WordSmith</title>
   </head>
   <body>
     <div class='container'>
-      <h2>WordSmith : Find and Replace</h2>
-      <h4>Hi there, what can I do for you today?</h4>
-      <form>
+      <div id="head">
+        <h1>WordSmith :: Find & Replace</h1>
+      </div><br>
+
+      <form class="ui large form">
         <label for="phrase">I want WordSmith to search through</label>
-        <input class="form-control" id="phrase" type="text" placeholder="this text">
+        <div class="ui transparent input">
+          <input id="phrase" type="text" placeholder="this text">
+        </div><br>
 
         <label for="wordFind">for</label>
-        <input class="form-control" id="wordFind" type="text" placeholder="this word">
+        <div class="ui transparent input">
+          <input id="wordFind" type="text" placeholder="this word">
+        </div><br>
 
         <label for="wordReplace">and replace it with</label>
-        <input class="form-control" id="wordReplace" type="text" placeholder="this word">
-        <br>
-        <button class="form-control" type="submit">Go</button>
+        <div class="ui transparent input">
+          <input id="wordReplace" type="text" placeholder="this word">
+        </div><br><br>
+
+        <button class="ui button">Go</button>
       </form>
     </div>
 
-    <div class='container' id="results"></div>
-
+    <div class="ui basic modal">
+      <div id="results"></div>
+    </div>
   </body>
 </html>

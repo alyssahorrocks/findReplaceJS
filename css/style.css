@@ -1,3 +1,45 @@
+body {
+  background: url("img/book.jpg");
+  background-size: cover;
+  text-align: justify;
+}
+
+h1 {
+  text-align: left;
+  color: black;
+  opacity: .7;
+}
+
+form.ui.large.form {
+  text-align: left;
+}
+
+.ui.form input {
+
+}
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+#phrase, #wordFind, #wordReplace {
+  color: #6b1d32;
+  width: 500px;
+}
+
+.ui.button {
+  width: 20%;
+  opacity: .5;
+  background: #ffa363;
+}
+
+.ui.input input {
+  line-height: inherit;
+}
+
 #results {
   display: none;
+  color: #f18b7c;
+  font-size: 3em;
 }
