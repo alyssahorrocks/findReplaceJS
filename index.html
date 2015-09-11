@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>WordSmith</title>
+  </head>
+  <body>
+    <div class='container'>
+      <h2>WordSmith : Find and Replace</h2>
+      <h4>Hi there, what can I do for you today?</h4>
+      <form>
+        <label for="phrase">I want WordSmith to search through</label>
+        <input class="form-control" id="phrase" type="text" placeholder="this text">
+
+        <label for="wordFind">for</label>
+        <input class="form-control" id="wordFind" type="text" placeholder="this word">
+
+        <label for="wordReplace">and replace it with</label>
+        <input class="form-control" id="wordReplace" type="text" placeholder="this word">
+        <br>
+        <button class="form-control" type="submit">Go</button>
+      </form>
+
+      <div id="results"></div>
+    </div>
+  </body>
+</html>
