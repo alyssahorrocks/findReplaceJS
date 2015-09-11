@@ -1,12 +1,13 @@
 var findReplace = function(phrase, wordFind, wordReplace) {
   var phraseArray = phrase.split(" ");
-  var replacementArray = []
+  var resultArray = []
 
   for(var i = 0; i < phraseArray.length; i+=1) {
     var wordOn = phraseArray[i].split("");
     var punc = "";
     var frontPunc = "";
 
+    //tests for punctuation -- separates punctuation from word//
     if (/[,.?\-!''""]/.test(wordOn[wordOn.length - 1]) && /[,.?\-!''""]/.test(wordOn[0])) {
       punc = wordOn.pop();
       frontPunc = wordOn.shift();
@@ -16,12 +17,13 @@ var findReplace = function(phrase, wordFind, wordReplace) {
       punc = wordOn.pop();
     };
 
+    //if word found to replace, replaces and rejoins punctuation//
     if (wordOn.join("").toLowerCase() === wordFind) {
-      replacementArray.push(frontPunc + wordReplace + punc);
+      resultArray.push(frontPunc + wordReplace + punc);
     } else {
-      replacementArray.push(phraseArray[i]);
+      resultArray.push(phraseArray[i]);
     };
   };
 
-  return replacementArray.join(" ");
+  return resultArray.join(" ");
 }
