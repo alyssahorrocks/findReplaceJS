@@ -27,3 +27,15 @@ var findReplace = function(phrase, wordFind, wordReplace) {
 
   return resultArray.join(" ");
 }
+
+
+
+$(document).ready(function() {
+  $('form').submit(function(event) {
+    var result = findReplace(($('#phrase').val()), ($('#wordFind').val()), ($('#wordReplace').val()));
+
+    $('#results').text(result);
+    $('#results').show();    
+    event.preventDefault();
+  });
+});
