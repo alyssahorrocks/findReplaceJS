@@ -4,17 +4,20 @@ var findReplace = function(phrase, wordFind, wordReplace) {
 
   for(var i = 0; i < phraseArray.length; i+=1) {
     var wordOn = phraseArray[i].split("");
+    var punc = "";
+    var frontPunc = "";
 
-    if (/[,.?\-!''""]/.test(wordOn[wordOn.length - 1])) {
-      var punc = wordOn.pop();
+    if (/[,.?\-!''""]/.test(wordOn[wordOn.length - 1]) && /[,.?\-!''""]/.test(wordOn[0])) {
+      punc = wordOn.pop();
+      frontPunc = wordOn.shift();
     } else if (/[,.?\-!''""]/.test(wordOn[0])) {
-      var punc = wordOn.shift();
-    } else {
-      var punc = "";
+      frontPunc = wordOn.shift();
+    } else if (/[,.?\-!''""]/.test(wordOn[wordOn.length -1])) {
+      punc = wordOn.pop();
     };
 
-    if (wordOn.join("") === wordFind) {
-      replacementArray.push(wordReplace + punc);
+    if (wordOn.join("").toLowerCase() === wordFind) {
+      replacementArray.push(frontPunc + wordReplace + punc);
     } else {
       replacementArray.push(phraseArray[i]);
     };

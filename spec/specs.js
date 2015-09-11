@@ -8,6 +8,10 @@ describe('findReplace', function() {
   });
 
   it('replace words in a phrase regardless of beginning or ending punctuation', function() {
-    expect(findReplace('the near sand, the dear sand, whatever fate', 'sand', 'land')).to.equal('the near land, the dear land, whatever fate');
+    expect(findReplace('the near !sand, the dear sand, whatever fate', 'sand', 'land')).to.equal('the near !land, the dear land, whatever fate');
+  });
+
+  it('replaces words in a phrase case insensitive', function() {
+    expect(findReplace('In the Sand of the Sky', 'sand', 'Land')).to.equal('In the Land of the Sky');
   });
 });
