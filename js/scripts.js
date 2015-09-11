@@ -29,13 +29,12 @@ var findReplace = function(phrase, wordFind, wordReplace) {
 }
 
 
-
 $(document).ready(function() {
   $('form').submit(function(event) {
     var result = findReplace(($('#phrase').val()), ($('#wordFind').val()), ($('#wordReplace').val()));
 
     $('#results').text(result);
-    $('#results').show();    
+    $('#results').show();
     event.preventDefault();
   });
 });
