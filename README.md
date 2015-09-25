@@ -8,7 +8,7 @@ This page accepts three user inputs: a phrase, a word to find, and a word to rep
 
 ## Setup
 
-* `git clone https://github.com/ahorrocks2/code_review_bands_venues.git`
+* `git clone https://github.com/alyssahorrocks2/findReplaceJS.git`
 * visit (http://semantic-ui.com/introduction/getting-started.html) ::
 * `npm install` (dependent upon operating system)
 * `npm install -g gulp`
